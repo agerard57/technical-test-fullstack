@@ -1,0 +1,43 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run the client",
+      "type": "npm",
+      "script": "start:client",
+      "promptOnClose": false,
+      "problemMatcher": [],
+      "presentation": {
+        "showReuseMessage": false,
+        "clear": true,
+        "reveal": "always",
+        "panel": "new"
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    },
+    {
+      "label": "Run the server",
+      "type": "npm",
+      "script": "start:server",
+      "promptOnClose": false,
+      "problemMatcher": [],
+      "presentation": {
+        "showReuseMessage": false,
+        "clear": true,
+        "reveal": "always",
+        "panel": "new"
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    },
+    {
+      "label": "Run all",
+      "dependsOn": ["Run the client", "Run the server"],
+      "dependsOrder": "parallel",
+      "group": "build"
+    }
+  ]
+}
