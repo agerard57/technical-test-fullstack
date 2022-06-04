@@ -1,0 +1,40 @@
+@font-face {
+  font-family: Archia-Regular;
+  src: url(./core/fonts/Archia-Regular.otf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: MonoLisa-Regular;
+  src: url(./core/fonts/MonoLisa-Regular.otf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Bebas-Neue-Bold;
+  src: url(./core/fonts/Bebas\ Neue\ Bold.otf);
+  font-display: swap;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container{
+  margin-bottom: 10%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
