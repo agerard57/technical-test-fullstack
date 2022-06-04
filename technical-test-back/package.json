@@ -4,7 +4,9 @@
   "description": "Back-end-nodejs",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx nodemon app.js",
+    "clean": "rm -rf node_modules",
+    "init": "npm i"
   },
   "keywords": [
     "nodejs"
@@ -13,6 +15,8 @@
   "license": "MIT",
   "dependencies": {
     "better-sqlite3": "^7.5.3",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
     "express": "^4.18.1",
     "nodemon": "^2.0.16"
   }

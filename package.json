@@ -1,0 +1,30 @@
+{
+  "name": "technical-test-fullstack",
+  "version": "1.0.0",
+  "description": "Technical test for SESAMm",
+  "scripts": {
+    "start": "npm run start:server &&npm run start:client",
+    "start:server": "cd technical-test-back && npm run start",
+    "start:client": "cd technical-test-front && npm run start",
+    "clean": "npm --prefix ./technical-test-back run clean && npm --prefix ./technical-test-front run clean",
+    "init": "npm run clean && npm --prefix ./technical-test-back run init && npm --prefix ./technical-test-front run init"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agerard57/technical-test-fullstack.git"
+  },
+  "keywords": [
+    "test",
+    "sesamm",
+    "fullstack",
+    "react",
+    "node",
+    "sqlite3"
+  ],
+  "author": "agerard57",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/agerard57/technical-test-fullstack/issues"
+  },
+  "homepage": "https://github.com/agerard57/technical-test-fullstack#readme"
+}
