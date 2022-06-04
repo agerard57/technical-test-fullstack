@@ -51,8 +51,8 @@ def create_table(cursor, connector):
         """
         CREATE TABLE users (
             id INTEGER PRIMARY KEY,
-            firstname TEXT NOT NULL,
-            lastname TEXT NOT NULL,
+            firstName TEXT NOT NULL,
+            lastName TEXT NOT NULL,
             gender TEXT NOT NULL,
             email TEXT NOT NULL,
             age INTEGER NOT NULL,
