@@ -8,7 +8,8 @@ import {
 
 import { Layout } from "../core";
 import { LandingPage } from "../landingPage";
-import { Users } from "../users";
+import { UserList } from "../userList";
+import { UserProfile } from "../userProfile";
 
 const RouteManager: FC = () => (
   <Router>
@@ -16,7 +17,8 @@ const RouteManager: FC = () => (
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/home" element={<LandingPage />} />
-        <Route path="/users" element={<Users />} />
+        <Route path="/users" element={<UserList />} />
+        <Route path="/user/:id" element={<UserProfile />} />
       </Routes>
     </Layout>
   </Router>
