@@ -1,1 +1,1 @@
-export { getAllUsers } from "./user.service";
+export { getDataForAllUsers, getDataByUserId } from "./user.service";
