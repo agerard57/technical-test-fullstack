@@ -1,5 +1,7 @@
 # SESAMm fullstack technical interview
 
+![image](https://user-images.githubusercontent.com/56207146/172072322-80fa02c3-aab9-4b87-991b-4cacd72ac19f.png)
+
 ## Table of Contents
 
 - [SESAMm fullstack technical interview](#sesamm-fullstack-technical-interview)
@@ -11,7 +13,7 @@
   - [Project](#project)
     - [Project features](#project-features)
       - [Home page](#home-page)
-      - [Add / Edit movie](#add--edit-movie)
+      - [Users list](#users-list)
       - [Profile page](#profile-page)
     - [Project tree](#project-tree)
     - [Data schemes](#data-schemes)
@@ -67,13 +69,18 @@ Nothing much on a technical level here, though :)
 
 There's also a navigation bar that allows you to go to the list of users...
 
-#### Add / Edit movie
+#### Users list
+
+![image](https://user-images.githubusercontent.com/56207146/172072356-330d007c-c553-4375-8320-58ed17f6bdf9.png)
+
 
 Here, the users are listed inside a table. You can sort them or search for someone. A the bottom of the page, you can choose the number of user per page thanks to the pagination system.
 
 Select your user and click on see profile to go to their profile page...
 
 #### Profile page
+
+![image](https://user-images.githubusercontent.com/56207146/172072362-82245197-97dc-4318-bcf0-cc0ec9b11d04.png)
 
 Finally, each user gets their profile page with their information displayed (personnal informations as well as their address)
 
