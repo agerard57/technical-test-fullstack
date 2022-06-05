@@ -1,6 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { FC } from "react";
+import paginationFactory from "react-bootstrap-table2-paginator";
+// eslint-disable-next-line import/no-internal-modules
 import {
   Search, // eslint-disable-next-line import/no-internal-modules
 } from "react-bootstrap-table2-toolkit/dist/react-bootstrap-table2-toolkit";
@@ -55,6 +57,7 @@ export const UsersTable: FC<Props> = ({ searchProps, baseProps }) => {
         condensed
         selectRow={selectRow}
         defaultSorted={sortByDefault}
+        pagination={paginationFactory()}
       />
     </>
   );

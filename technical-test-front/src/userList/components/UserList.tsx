@@ -9,6 +9,8 @@ import { UsersTable } from "./UsersTable";
 
 export const UserList: FC = () => {
   const { users, columns, loading } = useUserList();
+
+  // Loading while the table is being populated
   if (loading) return <LoadingScreen />;
   return (
     <>
