@@ -14,7 +14,7 @@ import { useUserProfile } from "../hooks";
 export const UserProfile: FC = () => {
   const { processedUserData } = useUserProfile();
   return (
-    <>
+    <span id="userProfile">
       <BlueBorderBackground backgroundColor={"transparent"}>
         <BackgroundVideo />
         <PageTitle title="Profile page" />
@@ -103,6 +103,6 @@ export const UserProfile: FC = () => {
           <Link to="/users">Go back to the table</Link>
         </div>
       </BlueBorderBackground>
-    </>
+    </span>
   );
 };

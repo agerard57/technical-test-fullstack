@@ -14,6 +14,9 @@ export const NavBar: FC = () => (
       right: 0;
       font-size: 1.4vw;
       transform: translateY(55%);
+      // I don't like this, however, this prevents the pagination
+      // from the userList page from overlapping the menu bar
+      z-index: 100 !important;
       transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       &:hover {
         transform: translateY(0%);

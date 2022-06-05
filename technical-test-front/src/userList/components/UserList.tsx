@@ -13,10 +13,10 @@ export const UserList: FC = () => {
   // Loading while the table is being populated
   if (loading) return <LoadingScreen />;
   return (
-    <>
+    <span id="userlist">
       <BlueBorderBackground backgroundColor={"transparent"}>
         <BackgroundVideo />
-        <PageTitle title="User list" />
+        <PageTitle title="User list"/>
         <div className="container">
           <ToolkitProvider
             bootstrap4
@@ -37,6 +37,6 @@ export const UserList: FC = () => {
           </ToolkitProvider>
         </div>
       </BlueBorderBackground>
-    </>
+    </span>
   );
 };

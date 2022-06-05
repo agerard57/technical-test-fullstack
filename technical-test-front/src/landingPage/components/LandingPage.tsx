@@ -6,7 +6,7 @@ import { BlueBorderBackground, Logo } from "../../core";
 import { LandingPageGreeting } from "./LandingPageGreeting";
 
 export const LandingPage: FC = () => (
-  <>
+  <section id="landingPage">
     <BlueBorderBackground backgroundColor={"white"}>
       <Logo
         styles={css`
@@ -20,5 +20,5 @@ export const LandingPage: FC = () => (
       />
       <LandingPageGreeting />
     </BlueBorderBackground>
-  </>
+  </section>
 );

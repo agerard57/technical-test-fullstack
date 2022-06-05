@@ -7,7 +7,8 @@
     "start:server": "cd technical-test-back && npm run start",
     "start:client": "cd technical-test-front && npm run start",
     "clean": "npm --prefix ./technical-test-back run clean && npm --prefix ./technical-test-front run clean",
-    "init": "npm run clean && npm --prefix ./technical-test-back run init && npm --prefix ./technical-test-front run init"
+    "init": "npm run clean && npm --prefix ./technical-test-back run init && npm --prefix ./technical-test-front run init",
+    "test": "npm --prefix ./technical-test-front run test"
   },
   "repository": {
     "type": "git",
