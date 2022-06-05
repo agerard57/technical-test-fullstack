@@ -5,7 +5,6 @@ import { FC } from "react";
 type Props = {
   title: string;
   alt?: boolean;
-  profilePicture?: boolean;
 };
 
 export const PartTitle: FC<Props> = ({ title, alt }) => (
@@ -32,7 +31,7 @@ export const PartTitle: FC<Props> = ({ title, alt }) => (
       >
         {title}
       </h3>
-      {alt ? (
+      {!alt ? (
         <></>
       ) : (
         <div
