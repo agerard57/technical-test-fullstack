@@ -10,7 +10,7 @@ describe("Should go to the user profile page and render", () => {
     page = await browser.newPage();
   });
 
-  it("navigates to the about page", async () => {
+  it("Loads a user profil page and looks for the title", async () => {
     await page.goto("http://localhost:3000/user/243051");
     await page.waitForSelector("#userProfile");
     const text = await page.$eval(
