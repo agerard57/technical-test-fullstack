@@ -1,51 +1,12 @@
-import { FC, useEffect, useState } from "react";
-import ToolkitProvider, {
-  Search, // eslint-disable-next-line import/no-internal-modules
-} from "react-bootstrap-table2-toolkit/dist/react-bootstrap-table2-toolkit";
-import BootstrapTable from "react-bootstrap-table-next";
-import { Link } from "react-router-dom";
-
 import { BlueBorderBackground, BackgroundVideo, PageTitle } from "../../core";
-import { getAllUsers } from "../../services";
+import { useUsers } from "../hooks";
+import { UsersTable } from "./UsersTable";
+import { FC } from "react";
+// eslint-disable-next-line import/no-internal-modules
+import ToolkitProvider from "react-bootstrap-table2-toolkit/dist/react-bootstrap-table2-toolkit";
 
 export const Users: FC = () => {
-  const [users, setUsers] = useState([]);
-  const [selectedId, setSelectedId] = useState();
-  const { SearchBar } = Search;
-
-  //  Gets all users
-  useEffect(() => {
-    getAllUsers().then((users) => {
-      setUsers(users.data);
-    });
-  }, []);
-
-  const columns = [
-    {
-      dataField: "lastName",
-      text: "Last name",
-      sort: true,
-    },
-    {
-      dataField: "firstName",
-      text: "First name",
-    },
-    {
-      dataField: "email",
-      text: "Email",
-    },
-    {
-      dataField: "phone",
-      text: "Phone",
-    },
-  ];
-
-  const selectRow = {
-    mode: "radio",
-    clickToSelect: true,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    onSelect: (row: { id: any }) => setSelectedId(row.id),
-  };
+  const { users, columns } = useUsers();
   return (
     <>
       <BlueBorderBackground backgroundColor={"transparent"}>
@@ -63,27 +24,10 @@ export const Users: FC = () => {
               searchProps: JSX.IntrinsicAttributes;
               baseProps: JSX.IntrinsicAttributes;
             }) => (
-              <div>
-                <SearchBar
-                  {...props.searchProps}
-                  style={{ width: "400px", height: "40px" }}
-                />
-                <Link to={`/user/${selectedId}`}>See profile</Link>{" "}
-                <BootstrapTable
-                  {...props.baseProps}
-                  noDataIndication="There is no user"
-                  striped
-                  hover
-                  condensed
-                  selectRow={selectRow}
-                  defaultSorted={[
-                    {
-                      dataField: "lastName",
-                      order: "asc",
-                    },
-                  ]}
-                />
-              </div>
+              <UsersTable
+                searchProps={props.searchProps}
+                baseProps={props.baseProps}
+              />
             )}
           </ToolkitProvider>
         </div>

@@ -31,7 +31,6 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "install": "npm i",
     "start": "react-scripts start",
     "check:eslint": "npx eslint --max-warnings 0 .",
     "check:prettier": "npx prettier --check .",
@@ -41,7 +40,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "clean": "rm -rf node_modules",
-    "init": "npm i"
+    "init": "npm i --legacy-peer-deps"
   },
   "eslintConfig": {
     "extends": [
