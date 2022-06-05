@@ -1,5 +1,4 @@
-const env = process.env;
-
+// Displays 1000 results per page
 const config = {
   listPerPage: 1000,
 };

@@ -16,6 +16,9 @@ getRoutes(app);
 
 // Server config
 const consoleMessage = require("./utils/consoleMessage");
+
+// We could use .env, but for this technical demo,
+// I'll just set the port to 3001 by default
 const port = 3001;
 
 // Setup server to start listening

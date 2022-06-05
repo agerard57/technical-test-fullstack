@@ -1,16 +1,14 @@
 const express = require("express");
 
-const srcPath = __dirname.replace("routes", "");
-
 module.exports = function routes(app) {
-  const router = express.Router();
-
   // ///////
   // Routes
-  require("./users.routes")(app, srcPath);
+  require("./users.routes")(app);
 
+  // ////////////////////
+  // Basic error message
   app.get("/", (_req, res) => {
-    res.json({ message: "Hello world" });
+    res.json({ error: "This URL doesn't exist" });
   });
 
   // ////////////////////////////////////////
