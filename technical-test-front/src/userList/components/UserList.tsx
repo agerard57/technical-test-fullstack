@@ -1,12 +1,15 @@
-import { BlueBorderBackground, BackgroundVideo, PageTitle } from "../../core";
-import { useUsers } from "../hooks";
-import { UsersTable } from "./UsersTable";
 import { FC } from "react";
 // eslint-disable-next-line import/no-internal-modules
 import ToolkitProvider from "react-bootstrap-table2-toolkit/dist/react-bootstrap-table2-toolkit";
 
-export const Users: FC = () => {
-  const { users, columns } = useUsers();
+import { BlueBorderBackground, BackgroundVideo, PageTitle } from "../../core";
+import { LoadingScreen } from "../../loadingScreen";
+import { useUserList } from "../hooks";
+import { UsersTable } from "./UsersTable";
+
+export const UserList: FC = () => {
+  const { users, columns, loading } = useUserList();
+  if (loading) return <LoadingScreen />;
   return (
     <>
       <BlueBorderBackground backgroundColor={"transparent"}>

@@ -10,7 +10,7 @@ type TableManager = {
   selectedUserId: number;
 };
 
-export const useUsersTable = (): TableManager => {
+export const useUserTable = (): TableManager => {
   const [selectedUserId, setSelectedUserId] = useState(0);
   const sortByDefault = [
     {

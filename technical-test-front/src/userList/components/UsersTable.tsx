@@ -1,5 +1,4 @@
 /** @jsxImportSource @emotion/react */
-import { useUsersTable } from "../hooks";
 import { css } from "@emotion/react";
 import { FC } from "react";
 import {
@@ -8,6 +7,8 @@ import {
 import BootstrapTable from "react-bootstrap-table-next";
 import { Link } from "react-router-dom";
 
+import { useUserTable } from "../hooks";
+
 type Props = {
   searchProps: JSX.IntrinsicAttributes;
   baseProps: JSX.IntrinsicAttributes;
@@ -15,7 +16,7 @@ type Props = {
 
 export const UsersTable: FC<Props> = ({ searchProps, baseProps }) => {
   const { SearchBar } = Search;
-  const { selectRow, sortByDefault, selectedUserId } = useUsersTable();
+  const { selectRow, sortByDefault, selectedUserId } = useUserTable();
   return (
     <>
       <div
